@@ -426,7 +426,10 @@ button {
 .orbit-chip {
   position: absolute;
   z-index: 3;
-  padding: 7px 9px;
+  padding: 6px 9px 6px 7px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   border: 1px solid var(--line);
   background: rgba(7,16,25,.88);
   color: #b5c9c4;
@@ -434,6 +437,23 @@ button {
   font-size: .61rem;
   letter-spacing: .08em;
   border-radius: 4px;
+}
+
+.orbit-chip img,
+.orbit-sql {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  flex: 0 0 18px;
+}
+
+.orbit-sql {
+  display: grid;
+  place-items: center;
+  color: #f2c811;
+  border: 1px solid #f2c811;
+  font-size: .42rem;
+  letter-spacing: 0;
 }
 
 .chip-1 { top: 52px; left: 42%; }
@@ -444,6 +464,7 @@ button {
 .chip-6 { bottom: 78px; left: 50px; }
 .chip-7 { top: 195px; left: 16px; }
 .chip-8 { top: 88px; left: 52px; }
+.chip-9 { top: 300px; left: 42%; }
 
 .signal-row {
   min-height: 112px;
@@ -664,6 +685,48 @@ button {
   background: rgba(255,255,255,.012);
 }
 
+.client-logo-wall {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  margin-bottom: 24px;
+  border-left: 1px solid var(--line);
+  border-top: 1px solid var(--line);
+}
+
+.client-logo-item {
+  min-height: 150px;
+  padding: 22px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  text-align: center;
+  background: rgba(255,255,255,.012);
+}
+
+.client-logo-item img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.client-logo-item span {
+  color: #d5e6e2;
+  font-family: "DM Mono", monospace;
+  font-size: .68rem;
+}
+
+.client-logo-item small {
+  color: #6f8a84;
+  font-size: .62rem;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+
 .client-spotlight {
   display: grid;
   grid-template-columns: .72fr 1.28fr;
@@ -748,6 +811,129 @@ button {
   margin-top: 18px;
   color: #667f79;
   font-size: .75rem;
+}
+
+.vertical-head {
+  margin-top: 58px;
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 24px;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 14px;
+}
+
+.vertical-head p {
+  max-width: 470px;
+  color: var(--muted);
+  font-size: .82rem;
+  text-align: right;
+}
+
+.vertical-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-left: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.vertical-card {
+  position: relative;
+  overflow: hidden;
+  min-height: 220px;
+  padding: 24px;
+  border-right: 1px solid var(--line);
+  background: rgba(255,255,255,.012);
+  transition: background .25s ease, transform .25s ease;
+}
+
+.vertical-card::after {
+  content: "DATA / DOMAIN";
+  position: absolute;
+  right: -18px;
+  bottom: 18px;
+  color: rgba(122,240,210,.05);
+  font-family: "DM Mono", monospace;
+  font-size: 1.8rem;
+  font-weight: 500;
+  transform: rotate(-90deg);
+  transform-origin: bottom right;
+  pointer-events: none;
+}
+
+.vertical-card:hover {
+  z-index: 1;
+  background: rgba(122,240,210,.06);
+  transform: translateY(-5px);
+}
+
+.vertical-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--line);
+}
+
+.vertical-logo {
+  width: 32px;
+  height: 32px;
+  margin-top: 18px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.vertical-logo-fca {
+  width: 82px;
+}
+
+.vertical-logo-group {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 52px;
+}
+
+.vertical-logo-group .vertical-logo {
+  margin-top: 12px;
+}
+
+.vertical-index {
+  color: var(--accent);
+  font-family: "DM Mono", monospace;
+  font-size: .62rem;
+  letter-spacing: .08em;
+}
+
+.vertical-signal {
+  color: #6f8a84;
+  font-family: "DM Mono", monospace;
+  font-size: .57rem;
+  letter-spacing: .1em;
+}
+
+.vertical-card h3 {
+  margin-top: 24px;
+  font-family: "Syne", sans-serif;
+  font-size: 1.55rem;
+  line-height: 1.05;
+}
+
+.vertical-clients {
+  display: block;
+  margin-top: 10px;
+  color: var(--accent);
+  font-family: "DM Mono", monospace;
+  font-size: .57rem;
+  line-height: 1.5;
+}
+
+.vertical-card p {
+  margin-top: 12px;
+  color: var(--muted);
+  font-size: .78rem;
+  line-height: 1.55;
 }
 
 .project-list-wrap {
@@ -860,6 +1046,99 @@ button {
 .stack-section {
   border-top: 1px solid var(--line);
   background: rgba(255,255,255,.01);
+}
+
+.stack-logos {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  gap: 10px;
+  margin-bottom: 28px;
+}
+
+.stack-logo {
+  min-width: 0;
+  min-height: 128px;
+  padding: 18px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 14px;
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,.018);
+  text-align: center;
+}
+
+.stack-logo img,
+.stack-logo-text {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+}
+
+.stack-logo img[src*="microsoftazure"],
+.orbit-chip img[src*="microsoftazure"] {
+  filter: invert(38%) sepia(96%) saturate(1735%) hue-rotate(174deg) brightness(91%) contrast(101%);
+}
+
+.stack-logo img[src*="dbt"],
+.orbit-chip img[src*="dbt"] {
+  filter: invert(52%) sepia(88%) saturate(1650%) hue-rotate(326deg) brightness(103%) contrast(101%);
+}
+
+.stack-logo img[src*="powerbi"],
+.orbit-chip img[src*="powerbi"] {
+  filter: invert(81%) sepia(98%) saturate(1040%) hue-rotate(2deg) brightness(101%) contrast(93%);
+}
+
+.stack-logo img[src*="snowflake"],
+.orbit-chip img[src*="snowflake"] {
+  filter: invert(65%) sepia(87%) saturate(1020%) hue-rotate(163deg) brightness(93%) contrast(91%);
+}
+
+.stack-logo img[src*="databricks"],
+.orbit-chip img[src*="databricks"] {
+  filter: invert(31%) sepia(99%) saturate(3300%) hue-rotate(348deg) brightness(101%) contrast(102%);
+}
+
+.stack-logo img[src*="apacheairflow"],
+.orbit-chip img[src*="apacheairflow"] {
+  filter: none;
+}
+
+.stack-logo img[src*="amazonwebservices"],
+.orbit-chip img[src*="amazonwebservices"] {
+  filter: none;
+}
+
+.stack-logo img[src*="amazonwebservices"] {
+  width: 72px;
+}
+
+.orbit-chip img[src*="amazonwebservices"] {
+  width: 30px;
+  flex-basis: 30px;
+}
+
+.stack-logo img[src*="python"],
+.orbit-chip img[src*="python"] {
+  filter: invert(38%) sepia(36%) saturate(2080%) hue-rotate(174deg) brightness(91%) contrast(91%);
+}
+
+.stack-logo-text {
+  display: grid;
+  place-items: center;
+  color: #f2c811;
+  border: 2px solid #f2c811;
+  font-family: "DM Mono", monospace;
+  font-size: .62rem;
+  font-weight: 500;
+}
+
+.stack-logo > span:last-child {
+  color: #c3d2ce;
+  font-family: "DM Mono", monospace;
+  font-size: .65rem;
 }
 
 .stack-grid {
@@ -1102,13 +1381,33 @@ button {
   }
 
   .exp-columns,
-  .stack-grid {
+  .stack-grid,
+  .stack-logos,
+  .client-logo-wall {
     grid-template-columns: 1fr;
   }
 
+  .stack-logos {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .client-logo-wall {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .experience-side,
-  .client-work {
+  .client-work,
+  .vertical-grid {
     grid-template-columns: 1fr;
+  }
+
+  .vertical-head {
+    align-items: start;
+    flex-direction: column;
+  }
+
+  .vertical-head p {
+    text-align: left;
   }
 
   .metric-block,

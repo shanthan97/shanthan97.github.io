@@ -15,7 +15,7 @@ GitHub profile link:
 Open `index.html` and replace these two placeholders:
 
 - `YOUR_LINKEDIN_USERNAME`
-- `YOUR_EMAIL@example.com`
+- `shanthankothuru@gmail.com`
 
 The portfolio already includes:
 
