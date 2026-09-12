@@ -233,7 +233,7 @@ button {
   max-width: 770px;
   margin-top: 8px;
   font-family: "Syne", sans-serif;
-  font-size: clamp(3.8rem, 7.4vw, 7rem);
+  font-size: clamp(3.2rem, 5.8vw, 5.4rem);
   line-height: .92;
   letter-spacing: -.06em;
 }
@@ -561,7 +561,7 @@ button {
 .section-head h2 {
   max-width: 800px;
   font-family: "Syne", sans-serif;
-  font-size: clamp(2.4rem, 5vw, 5rem);
+  font-size: clamp(2.2rem, 4vw, 3.8rem);
   line-height: 1;
   letter-spacing: -.05em;
 }
@@ -569,6 +569,39 @@ button {
 .experience-section,
 .projects-section {
   border-top: 1px solid var(--line);
+}
+
+.experience-employers {
+  margin-bottom: 18px;
+  padding: 16px 18px;
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,.012);
+}
+
+.employer-list {
+  margin-top: 12px;
+  display: grid;
+  gap: 8px;
+  color: #dfeae7;
+  font-family: "Syne", sans-serif;
+  font-size: 1rem;
+  letter-spacing: -.02em;
+}
+
+.employer-list > span {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: baseline;
+  gap: 16px;
+}
+
+.employer-list small {
+  margin-left: 0;
+  color: var(--muted);
+  font-family: "DM Mono", monospace;
+  font-size: .68rem;
+  letter-spacing: 0;
+  white-space: nowrap;
 }
 
 .experience-grid {
@@ -756,7 +789,7 @@ button {
 .client-brand h3 {
   margin-top: 16px;
   font-family: "Syne", sans-serif;
-  font-size: clamp(2.8rem, 6vw, 5.5rem);
+  font-size: clamp(2.5rem, 4.8vw, 4.3rem);
   line-height: .92;
   letter-spacing: -.06em;
 }
@@ -811,6 +844,41 @@ button {
   margin-top: 18px;
   color: #667f79;
   font-size: .75rem;
+}
+
+.career-summary {
+  max-width: 980px;
+  margin-top: 20px;
+  padding: 18px 20px;
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,.012);
+}
+
+.career-list {
+  margin: 14px 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 10px;
+}
+
+.career-list li {
+  padding-top: 10px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: .82rem;
+  line-height: 1.6;
+}
+
+.career-list li:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+
+.career-list strong {
+  color: #dfeae7;
+  font-family: "Syne", sans-serif;
+  font-weight: 700;
 }
 
 .vertical-head {
@@ -1195,7 +1263,7 @@ button {
   max-width: 960px;
   margin: 25px auto 0;
   font-family: "Syne", sans-serif;
-  font-size: clamp(2.2rem, 5.6vw, 5rem);
+  font-size: clamp(2rem, 4.2vw, 3.8rem);
   line-height: 1;
   letter-spacing: -.05em;
 }
@@ -1224,10 +1292,10 @@ button {
 }
 
 .contact-panel h2 {
-  max-width: 850px;
+  max-width: 980px;
   margin-top: 16px;
   font-family: "Syne", sans-serif;
-  font-size: clamp(2.6rem, 5.8vw, 5.5rem);
+  font-size: clamp(2.4rem, 4.2vw, 4.2rem);
   line-height: .98;
   letter-spacing: -.055em;
 }
@@ -1351,7 +1419,7 @@ button {
   }
 
   .hero h1 {
-    font-size: clamp(3.2rem, 15vw, 5.3rem);
+    font-size: clamp(2.8rem, 12vw, 4.2rem);
   }
 
   .hero-foot {
